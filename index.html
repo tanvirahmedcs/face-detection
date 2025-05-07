@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Face Recognition Attendance System - Regent University</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Face Recognition Attendance System</h1>
+
+    <section id="teacher-login-section">
+        <h2>Teacher Login</h2>
+        <input type="text" id="teacher-username" placeholder="Username" />
+        <input type="password" id="teacher-password" placeholder="Password" />
+        <button id="teacher-login-btn">Login</button>
+        <button id="teacher-logout-btn" style="display:none;">Logout</button>
+        <p id="teacher-login-status"></p>
+    </section>
+
+    <section id="register-section" style="display:none;">
+        <h2>Register Student</h2>
+        <input type="text" id="student-id" placeholder="Enter student ID" />
+        <input type="text" id="student-name" placeholder="Enter student name" />
+        <input type="text" id="student-department" placeholder="Enter department" />
+        <button id="start-register">Start Webcam</button>
+        <button id="capture-register" disabled>Capture & Register</button>
+        <video id="register-video" autoplay muted></video>
+        <p id="register-status"></p>
+        <button id="export-attendance-btn" style="margin-top: 10px;">Export Attendance to Excel</button>
+    </section>
+
+    <section id="attendance-section">
+        <h2>Mark Attendance</h2>
+        <button id="start-attendance">Start Webcam</button>
+        <button id="capture-attendance" disabled>Capture & Mark Attendance</button>
+        <video id="attendance-video" autoplay muted></video>
+        <p id="attendance-status"></p>
+    </section>
+
+    <section id="records-section">
+        <h2>Attendance Records</h2>
+        <button id="refresh-records">Refresh Records</button>
+        <ul id="records-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
